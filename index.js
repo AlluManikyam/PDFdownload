@@ -57,6 +57,7 @@ app.get("/pdf_download", function (req, res) {
         style: "pdfTableColumn",
         border: [true, true, true, true],
       };
+      if (value === "N") obj.opacity = 0.5;
       pdfData.push(obj);
     }
     pdfBodyData.push(pdfData);
@@ -165,13 +166,12 @@ app.get("/pdf_download", function (req, res) {
   };
 
   // var printer = new PdfPrinter();
-  let pdfDoc = printer.createPdfKitDocument(dd);
+  let pdfDoc = printer.createPdfKitDocument(dd, dd);
 
   // var pdfDoc = PdfPrinter.createPdf(docDefinition);
   pdfDoc.pipe(fs.createWriteStream(`${__dirname}/public/holidayslist.pdf`));
   res.send({
-    message: "Pdf downloaded successfully",
-    pdfBodyData: pdfBodyData,
+    message: "Pdf downloaded successfully"
   });
   pdfDoc.end();
 });
