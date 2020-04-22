@@ -4,6 +4,7 @@ var PdfPrinter = require("pdfmake");
 var fs = require("fs");
 var _ = require("lodash");
 let holidaysList = require("./constants/holidays.json");
+const { Base64Encode } = require("base64-stream");
 
 let fonts = {
   Roboto: {
@@ -15,7 +16,7 @@ let fonts = {
   },
 };
 
-app.get("/pdf_download", function (req, res) {
+app.get("/pdf_download", async function (req, res) {
   let pdfHeaders = [];
   let pdfBodyData = [];
   let heights = [
@@ -108,6 +109,7 @@ app.get("/pdf_download", function (req, res) {
         },
         layout: {
           defaultBorder: false,
+          //! fill color to column cells
           fillColor: function (rowIndex, node, columnIndex) {
             return columnIndex >= 3 && columnIndex % 2 !== 0 ? "#efefef" : null;
           },
@@ -165,16 +167,31 @@ app.get("/pdf_download", function (req, res) {
     },
   };
 
-  // var printer = new PdfPrinter();
   let pdfDoc = printer.createPdfKitDocument(dd, dd);
+  const base64Text = await getPDFBase64Text(pdfDoc);
 
-  // var pdfDoc = PdfPrinter.createPdf(docDefinition);
-  pdfDoc.pipe(fs.createWriteStream(`${__dirname}/public/holidayslist.pdf`));
-  res.send({
-    message: "Pdf downloaded successfully"
+  // Converting to binary data
+  var buf = Buffer.from(base64Text, "base64");
+  res.writeHead(200, {
+    "Content-Type": "application/pdf",
+    "Content-Disposition": 'attachment; filename="holidays.pdf"',
   });
-  pdfDoc.end();
+  res.end(buf);
 });
+
+async function getPDFBase64Text(pdfDoc) {
+  return new Promise((resolve) => {
+    var base64String = "";
+    const stream = pdfDoc.pipe(new Base64Encode());
+    pdfDoc.end();
+
+    stream.on("data", (chunk) => {
+      base64String += chunk;
+    });
+
+    stream.on("end", () => resolve(base64String));
+  });
+}
 
 var server = app.listen(3005, function () {
   var host = server.address().address;
