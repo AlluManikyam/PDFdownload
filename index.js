@@ -19,6 +19,8 @@ let fonts = {
 app.get("/pdf_download", async function (req, res) {
   let pdfHeaders = [];
   let pdfBodyData = [];
+  let pdfHeaders1 = [];
+  let pdfBodyData2 = [];
   let heights = [
     15,
     "auto",
@@ -43,15 +45,18 @@ app.get("/pdf_download", async function (req, res) {
     }
   }
   let headersList = headers.map((a) => a.charAt(0).toUpperCase() + a.substr(1));
-  for (let header of headersList) {
+  for (let header of [...headersList]) {
     let obj = { text: header, style: "pdfTableHeader" };
-    pdfHeaders.push(obj);
+    pdfHeaders.push({...obj});
+    pdfHeaders1.push({...obj});
   }
-  pdfBodyData.push(pdfHeaders);
+  pdfBodyData.push([...pdfHeaders]);
+  pdfBodyData2.push([...pdfHeaders1]);
 
   for (let data of pdfDownloadData) {
     let objValues = Object.values(data);
     let pdfData = [];
+    let pdfData2 = [];
     for (let value of objValues) {
       let obj = {
         text: value,
@@ -59,10 +64,79 @@ app.get("/pdf_download", async function (req, res) {
         border: [true, true, true, true],
       };
       if (value === "N") obj.opacity = 0.5;
-      pdfData.push(obj);
+      pdfData.push({...obj});
+      pdfData2.push({...obj});
     }
-    pdfBodyData.push(pdfData);
+    pdfBodyData.push([...pdfData]);
+    pdfBodyData2.push([...pdfData2]);
   }
+  let testObj = [
+    {
+      style: "pdfTable",
+      table: {
+        headerRows: 1,
+        heights: heights,
+        widths: widths,
+        body: pdfBodyData,
+      },
+      layout: {
+        defaultBorder: false,
+        //! fill color to column cells
+        fillColor: function (rowIndex, node, columnIndex) {
+          return columnIndex >= 3 && columnIndex % 2 !== 0 ? "#efefef" : null;
+        },
+        hLineWidth: function (i, node) {
+          return i === 0 || i === node.table.body.length ? 1 : 2;
+        },
+        vLineWidth: function (i, node) {
+          return i === 0 || i === node.table.widths.length ? 1 : 0;
+        },
+        hLineColor: function (i, node) {
+          return i === 0 || i === node.table.body.length
+            ? "#edeeee"
+            : "#edeeee";
+        },
+        vLineColor: function (i, node) {
+          return i === 0 || i === node.table.widths.length
+            ? "#edeeee"
+            : "green";
+        },
+      },
+    },
+    {
+      style: "pdfTable",
+      pageBreak: 'before',
+      table: {
+        headerRows: 1,
+        heights: heights,
+        widths: widths,
+        body: pdfBodyData2,
+      },
+      layout: {
+        defaultBorder: false,
+        //! fill color to column cells
+        fillColor: function (rowIndex, node, columnIndex) {
+          return columnIndex >= 3 && columnIndex % 2 !== 0 ? "#efefef" : null;
+        },
+        hLineWidth: function (i, node) {
+          return i === 0 || i === node.table.body.length ? 1 : 2;
+        },
+        vLineWidth: function (i, node) {
+          return i === 0 || i === node.table.widths.length ? 1 : 0;
+        },
+        hLineColor: function (i, node) {
+          return i === 0 || i === node.table.body.length
+            ? "#edeeee"
+            : "#edeeee";
+        },
+        vLineColor: function (i, node) {
+          return i === 0 || i === node.table.widths.length
+            ? "#edeeee"
+            : "green";
+        },
+      },
+    },
+  ];
 
   let printer = new PdfPrinter(fonts);
   var dd = {
@@ -99,38 +173,7 @@ app.get("/pdf_download", async function (req, res) {
           },
         ],
       },
-      {
-        style: "pdfTable",
-        table: {
-          headerRows: 1,
-          heights: heights,
-          widths: widths,
-          body: pdfBodyData,
-        },
-        layout: {
-          defaultBorder: false,
-          //! fill color to column cells
-          fillColor: function (rowIndex, node, columnIndex) {
-            return columnIndex >= 3 && columnIndex % 2 !== 0 ? "#efefef" : null;
-          },
-          hLineWidth: function (i, node) {
-            return i === 0 || i === node.table.body.length ? 1 : 2;
-          },
-          vLineWidth: function (i, node) {
-            return i === 0 || i === node.table.widths.length ? 1 : 0;
-          },
-          hLineColor: function (i, node) {
-            return i === 0 || i === node.table.body.length
-              ? "#edeeee"
-              : "#edeeee";
-          },
-          vLineColor: function (i, node) {
-            return i === 0 || i === node.table.widths.length
-              ? "#edeeee"
-              : "green";
-          },
-        },
-      },
+      ...testObj,
     ],
     styles: {
       pageMargin: {
