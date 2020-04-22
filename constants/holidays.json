@@ -8,7 +8,44 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Raksha Bandan",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Maha Shivaratri",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+ 
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
     "chennai": "Y"
   },
   {
@@ -20,7 +57,7 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
   },
   {
@@ -32,128 +69,7 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
   },
   {
@@ -165,128 +81,44 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+ 
+  {
     "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
+    "name": "Guru Nanak Jayanthi",
     "type": "Mandatory",
     "kolkata": "N",
     "hyderabad": "Y",
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
+    "name": "Vijaya Dashmi/Dussera",
     "type": "Mandatory",
     "kolkata": "N",
     "hyderabad": "Y",
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
+    "name": "Sankrathi/Pongal/Kite festival",
     "type": "Mandatory",
     "kolkata": "N",
     "hyderabad": "Y",
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
-    "chennai": "Y"
-  },{
-    "date": "26 Jan 20-Mon",
-    "name": "Republic Day",
-    "type": "Mandatory",
-    "kolkata": "N",
-    "hyderabad": "Y",
-    "vizag": "Y",
-    "ahmedabad": "N",
-    "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
   },
   {
@@ -298,9 +130,11 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+ 
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -309,9 +143,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -320,9 +155,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -331,9 +167,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -342,9 +179,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -353,9 +191,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -364,9 +203,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -375,9 +215,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -386,9 +227,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -397,9 +239,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -408,9 +251,10 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
     "chennai": "Y"
-  },{
+  },
+  {
     "date": "26 Jan 20-Mon",
     "name": "Republic Day",
     "type": "Mandatory",
@@ -419,7 +263,187 @@
     "vizag": "Y",
     "ahmedabad": "N",
     "delhi": "Y",
-   "bangalore": "N",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
+    "chennai": "Y"
+  },
+  {
+    "date": "26 Jan 20-Mon",
+    "name": "Republic Day",
+    "type": "Mandatory",
+    "kolkata": "N",
+    "hyderabad": "Y",
+    "vizag": "Y",
+    "ahmedabad": "N",
+    "delhi": "Y",
+    "bangalore": "N",
     "chennai": "Y"
   }
 ]
