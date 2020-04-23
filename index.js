@@ -17,25 +17,25 @@ let fonts = {
 };
 
 app.get("/pdf_download", async function (req, res) {
-  let pdfDownloadArr=[]
-  let pdfMainDataArr=[]
-  let holidayHeadersArr = [];
-  let pdfBodyDataArr = [];
-  let pdfDownloadReport=[]
+  let pdfReportArray = [],pdfPreparedMainData = [],pdfPreparedHeaders = [],pdfPreparedData = [],pdfDownloadReport = [];
+  let locationsList=locations.map((o) => o.name)
+  locationsList=locationsList.join(", ")
+  //? Prepared the headers for the report
   if (locations.length >= 7) {
     let i = 0;
     while (i <= locations.length) {
       let headers = locations.slice(i, i + 7);
       i = i + 7;
-      holidayHeadersArr.push([...headers]);
+      pdfPreparedHeaders.push([...headers]);
     }
   } else {
-    holidayHeadersArr.push([...locations]);
+    pdfPreparedHeaders.push([...locations]);
   }
 
-  for (let i = 0; i < holidayHeadersArr.length; i++) {
-    let hh = holidayHeadersArr[i].map((o) => o.name);
-    pdfBodyDataArr = [];
+  //? Prepared the data for downloading report
+  for (let i = 0; i < pdfPreparedHeaders.length; i++) {
+    let hh = pdfPreparedHeaders[i].map((o) => o.name);
+    pdfPreparedData = [];
     holidaysListArrRes.map((hd) => {
       let hgObj = {
         "Date/Day": hd.date,
@@ -44,28 +44,30 @@ app.get("/pdf_download", async function (req, res) {
       };
       let hrLocs = hd.locations.map((o) => o.name);
       hh.map((h) => {
-        hgObj[h] = hrLocs.includes(h)===true?"Y":"N";
+        hgObj[h] = hrLocs.includes(h) === true ? "Y" : "N";
       });
-      pdfBodyDataArr.push(hgObj);
+      pdfPreparedData.push(hgObj);
     });
-    pdfMainDataArr.push(pdfBodyDataArr);
+    pdfPreparedMainData.push(pdfPreparedData);
   }
-  pdfMainDataArr.map((pdf,key)=>{
-    let pdfBodyData=[]
-    let pdfMainData=[]
-    let pdfData=[]
-    let pdfHeaders=[]
-    let pdfDownloadObj={}
-    let pdfHeadersArr=Object.keys(pdf[0])
+
+  //? Report data is converting as per pdf download format
+  pdfPreparedMainData.map((pdf) => {
+    let pdfBodyData = [];
+    let pdfMainData = [];
+    let pdfData = [];
+    let pdfHeaders = [];
+    let pdfDownloadObj = {};
+    let pdfHeadersArr = Object.keys(pdf[0]);
     for (let header of [...pdfHeadersArr]) {
       let obj = { text: header, style: "pdfTableHeader" };
-      pdfHeaders.push({...obj});
+      pdfHeaders.push({ ...obj });
     }
-    pdfMainData.push(pdfHeaders)
+    pdfMainData.push(pdfHeaders);
 
     for (let data of pdf) {
       let objValues = Object.values(data);
-      pdfData=[]
+      pdfData = [];
       for (let value of objValues) {
         let obj = {
           text: value,
@@ -73,28 +75,29 @@ app.get("/pdf_download", async function (req, res) {
           border: [true, true, true, true],
         };
         if (value === "N") obj.opacity = 0.5;
-        pdfData.push({...obj});
+        pdfData.push({ ...obj });
       }
       pdfBodyData.push([...pdfData]);
     }
-    pdfMainData.push(...pdfBodyData)
-    let count=Object.keys(pdfMainData[1]).length
-    let widths=[];
-    let heights=[]
-    for(let i=0;i<count;i++){
-      let wtM = i===0?100:i===1?80:"*"
-      let htM = i===0?15:"auto"
-      widths.push(wtM)
-      heights.push(htM)
+    pdfMainData.push(...pdfBodyData);
+    let count = Object.keys(pdfMainData[1]).length;
+    let widths = [];
+    let heights = [];
+    for (let i = 0; i < count; i++) {
+      let wtM = i === 0 ? 100 : i === 1 ? 80 : "*";
+      let htM = i === 0 ? 15 : "auto";
+      widths.push(wtM);
+      heights.push(htM);
     }
-    pdfDownloadObj.widths=widths
-    pdfDownloadObj.heights=heights;
-    pdfDownloadObj.data=pdfMainData;
-    pdfDownloadArr.push(pdfDownloadObj)
-  })
+    pdfDownloadObj.widths = widths;
+    pdfDownloadObj.heights = heights;
+    pdfDownloadObj.data = pdfMainData;
+    pdfReportArray.push(pdfDownloadObj);
+  });
 
-  pdfDownloadArr.map((report,index)=>{
-   let reportObj= {
+  
+  pdfReportArray.map((report, index) => {
+    let reportObj = {
       style: "pdfTable",
       table: {
         headerRows: 1,
@@ -125,11 +128,10 @@ app.get("/pdf_download", async function (req, res) {
             : "green";
         },
       },
-    }
-    if(index>0) reportObj.pageBreak ='before'
-
-    pdfDownloadReport.push(reportObj)
-  })
+    };
+    if (index > 0) reportObj.pageBreak = "before";
+    pdfDownloadReport.push(reportObj);
+  });
 
   let printer = new PdfPrinter(fonts);
   var dd = {
@@ -160,13 +162,13 @@ app.get("/pdf_download", async function (req, res) {
               {
                 style: "description",
                 text:
-                  "Holiday List - Jan 2020 to Dec 2020 | Locations - Mumbai, Pune, Delhi, Banglore, Ahmedabad, Chennai, Kolkata, Pune",
+                  `Holiday List - Jan 2020 to Dec 2020 | Locations - ${locationsList}`,
               },
             ],
           },
         ],
       },
-     ...pdfDownloadReport
+      ...pdfDownloadReport,
     ],
     styles: {
       pageMargin: {
@@ -215,6 +217,7 @@ app.get("/pdf_download", async function (req, res) {
   res.end(buf);
 });
 
+//? Converting to file to base 64
 async function getPDFBase64Text(pdfDoc) {
   return new Promise((resolve) => {
     var base64String = "";
