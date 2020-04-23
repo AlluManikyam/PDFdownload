@@ -1,0 +1,564 @@
+[
+  {
+    "name": "ffhhke",
+    "location_is_included": false,
+    "locations": [
+      {
+        "name": "Chennai",
+        "description": "Chennai",
+        "id": 4,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:41:02.411Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "department_is_included": false,
+    "departments": [
+      {
+        "name": "Testing",
+        "description": "Testing description",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      }
+    ],
+    "designation_is_included": false,
+    "designations": [
+      {
+        "name": "Sr Software Engineer",
+        "description": "Senior Software Engineer",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "date": "2020-04-15",
+    "type": "Restricted",
+    "year": "2020",
+    "month": "04",
+    "id": 92,
+    "is_deleted": false,
+    "created_at": "2020-04-16T10:14:58.424Z",
+    "updated_at": "2020-04-16T10:14:58.424Z",
+    "locations_included": [
+      {
+        "name": "Hyderabad2",
+        "description": "Manjeera mall kukatpally",
+        "id": 1,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:33:49.033Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Vizag",
+        "description": "Satyam Junction",
+        "id": 2,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:34:59.327Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Banglore",
+        "description": "Karnataka",
+        "id": 3,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-07T12:10:33.892Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Kolkata",
+        "description": "Kolkata",
+        "id": 5,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:43:26.933Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ]
+  },
+  {
+    "name": "Holiday",
+    "location_is_included": true,
+    "locations": [
+      {
+        "name": "Kolkata",
+        "description": "Kolkata",
+        "id": 5,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:43:26.933Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Chennai",
+        "description": "Chennai",
+        "id": 4,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:41:02.411Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Banglore",
+        "description": "Karnataka",
+        "id": 3,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-07T12:10:33.892Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Hyderabad2",
+        "description": "Manjeera mall kukatpally",
+        "id": 1,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:33:49.033Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Vizag",
+        "description": "Satyam Junction",
+        "id": 2,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:34:59.327Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "department_is_included": true,
+    "departments": [
+      {
+        "name": "Development",
+        "description": "Development description",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Testing",
+        "description": "Testing description",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "HR",
+        "description": "HR description",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Marketing",
+        "description": "Marketing description",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      }
+    ],
+    "designation_is_included": true,
+    "designations": [
+      {
+        "name": "Lead",
+        "description": "Team Lead",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Sr Software Engineer",
+        "description": "Senior Software Engineer",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Software Engineer",
+        "description": "Software Engineer",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Technical Manager",
+        "description": "Technical Manager",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "date": "2020-04-17",
+    "type": "Mandatory",
+    "year": "2020",
+    "month": "04",
+    "id": 90,
+    "is_deleted": false,
+    "created_at": "2020-04-16T05:29:03.328Z",
+    "updated_at": "2020-04-16T05:29:03.328Z"
+  },
+  {
+    "name": "May Day",
+    "location_is_included": true,
+    "locations": [
+      {
+        "name": "Chennai",
+        "description": "Chennai",
+        "id": 4,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:41:02.411Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Hyderabad2",
+        "description": "Manjeera mall kukatpally",
+        "id": 1,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:33:49.033Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Vizag",
+        "description": "Satyam Junction",
+        "id": 2,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:34:59.327Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Banglore",
+        "description": "Karnataka",
+        "id": 3,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-07T12:10:33.892Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Kolkata",
+        "description": "Kolkata",
+        "id": 5,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:43:26.933Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "department_is_included": true,
+    "departments": [
+      {
+        "name": "Marketing",
+        "description": "Marketing description",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "HR",
+        "description": "HR description",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Testing",
+        "description": "Testing description",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Development",
+        "description": "Development description",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      }
+    ],
+    "designation_is_included": true,
+    "designations": [
+      {
+        "name": "Software Engineer",
+        "description": "Software Engineer",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Sr Software Engineer",
+        "description": "Senior Software Engineer",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Lead",
+        "description": "Team Lead",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Technical Manager",
+        "description": "Technical Manager",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "date": "2020-05-01",
+    "type": "Mandatory",
+    "year": "2020",
+    "month": "05",
+    "id": 89,
+    "is_deleted": false,
+    "created_at": "2020-04-16T03:48:05.515Z",
+    "updated_at": "2020-04-16T03:48:05.515Z"
+  },
+  {
+    "name": "Rsdfghjdfghjfgh",
+    "location_is_included": true,
+    "locations": [
+      {
+        "name": "Hyderabad2",
+        "description": "Manjeera mall kukatpally",
+        "id": 1,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:33:49.033Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Kolkata",
+        "description": "Kolkata",
+        "id": 5,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:43:26.933Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Chennai",
+        "description": "Chennai",
+        "id": 4,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-08T04:41:02.411Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Banglore",
+        "description": "Karnataka",
+        "id": 3,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2020-01-07T12:10:33.892Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Vizag",
+        "description": "Satyam Junction",
+        "id": 2,
+        "client_id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-14T11:34:59.327Z",
+        "created_by": 123,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "department_is_included": true,
+    "departments": [
+      {
+        "name": "Testing",
+        "description": "Testing description",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Development",
+        "description": "Development description",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "HR",
+        "description": "HR description",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      },
+      {
+        "name": "Marketing",
+        "description": "Marketing description",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-10T06:26:55.391Z",
+        "created_by": 1,
+        "updated_at": "2019-10-10T06:26:55.391Z",
+        "updated_by": null
+      }
+    ],
+    "designation_is_included": true,
+    "designations": [
+      {
+        "name": "Sr Software Engineer",
+        "description": "Senior Software Engineer",
+        "id": 2,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Technical Manager",
+        "description": "Technical Manager",
+        "id": 4,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Lead",
+        "description": "Team Lead",
+        "id": 3,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      },
+      {
+        "name": "Software Engineer",
+        "description": "Software Engineer",
+        "id": 1,
+        "is_deleted": false,
+        "created_at": "2019-10-15T07:32:38.513Z",
+        "created_by": 1,
+        "updated_at": null,
+        "updated_by": null
+      }
+    ],
+    "date": "2020-04-16",
+    "type": "Restricted",
+    "year": "2020",
+    "month": "04",
+    "id": 88,
+    "is_deleted": false,
+    "created_at": "2020-04-15T10:48:10.859Z",
+    "updated_at": "2020-04-15T10:48:10.859Z"
+  }
+]

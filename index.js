@@ -1,9 +1,9 @@
 var express = require("express");
 var app = express();
 var PdfPrinter = require("pdfmake");
-var fs = require("fs");
 var _ = require("lodash");
-let holidaysList = require("./constants/holidays.json");
+let locations = require("./constants/locations.json");
+let holidaysListArrRes = require("./constants/holidaysList.json");
 const { Base64Encode } = require("base64-stream");
 
 let fonts = {
@@ -17,67 +17,90 @@ let fonts = {
 };
 
 app.get("/pdf_download", async function (req, res) {
-  let pdfHeaders = [];
-  let pdfBodyData = [];
-  let pdfHeaders1 = [];
-  let pdfBodyData2 = [];
-  let heights = [
-    15,
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-    "auto",
-  ];
-  let widths = [80, 100, "*", "*", "*", "*", "*", "*", "*", "*"];
-  let pdfDownloadData = holidaysList;
-  let headers = Object.keys(holidaysList[0]);
-  let oldHeaders = ["date", "name", "type"];
-  let newHeaders = ["Date/Day", "Holiday Name", "Holiday Type"];
-  for (let header of headers) {
-    if (oldHeaders.includes(header)) {
-      let indexValue = oldHeaders.indexOf(header);
-      header = headers.splice(indexValue, 1, newHeaders[indexValue]);
+  let pdfDownloadArr=[]
+  let pdfMainDataArr=[]
+  let holidayHeadersArr = [];
+  let pdfBodyDataArr = [];
+  let pdfDownloadReport=[]
+  if (locations.length >= 7) {
+    let i = 0;
+    while (i <= locations.length) {
+      let headers = locations.slice(i, i + 7);
+      i = i + 7;
+      holidayHeadersArr.push([...headers]);
     }
+  } else {
+    holidayHeadersArr.push([...locations]);
   }
-  let headersList = headers.map((a) => a.charAt(0).toUpperCase() + a.substr(1));
-  for (let header of [...headersList]) {
-    let obj = { text: header, style: "pdfTableHeader" };
-    pdfHeaders.push({...obj});
-    pdfHeaders1.push({...obj});
-  }
-  pdfBodyData.push([...pdfHeaders]);
-  pdfBodyData2.push([...pdfHeaders1]);
 
-  for (let data of pdfDownloadData) {
-    let objValues = Object.values(data);
-    let pdfData = [];
-    let pdfData2 = [];
-    for (let value of objValues) {
-      let obj = {
-        text: value,
-        style: "pdfTableColumn",
-        border: [true, true, true, true],
+  for (let i = 0; i < holidayHeadersArr.length; i++) {
+    let hh = holidayHeadersArr[i].map((o) => o.name);
+    pdfBodyDataArr = [];
+    holidaysListArrRes.map((hd) => {
+      let hgObj = {
+        "Date/Day": hd.date,
+        "Holiday Name": hd.name,
+        "Holiday Type": hd.type,
       };
-      if (value === "N") obj.opacity = 0.5;
-      pdfData.push({...obj});
-      pdfData2.push({...obj});
-    }
-    pdfBodyData.push([...pdfData]);
-    pdfBodyData2.push([...pdfData2]);
+      let hrLocs = hd.locations.map((o) => o.name);
+      hh.map((h) => {
+        hgObj[h] = hrLocs.includes(h)===true?"Y":"N";
+      });
+      pdfBodyDataArr.push(hgObj);
+    });
+    pdfMainDataArr.push(pdfBodyDataArr);
   }
-  let testObj = [
-    {
+  pdfMainDataArr.map((pdf,key)=>{
+    let pdfBodyData=[]
+    let pdfMainData=[]
+    let pdfData=[]
+    let pdfHeaders=[]
+    let pdfDownloadObj={}
+    let pdfHeadersArr=Object.keys(pdf[0])
+    for (let header of [...pdfHeadersArr]) {
+      let obj = { text: header, style: "pdfTableHeader" };
+      pdfHeaders.push({...obj});
+    }
+    pdfMainData.push(pdfHeaders)
+
+    for (let data of pdf) {
+      let objValues = Object.values(data);
+      pdfData=[]
+      for (let value of objValues) {
+        let obj = {
+          text: value,
+          style: "pdfTableColumn",
+          border: [true, true, true, true],
+        };
+        if (value === "N") obj.opacity = 0.5;
+        pdfData.push({...obj});
+      }
+      pdfBodyData.push([...pdfData]);
+    }
+    pdfMainData.push(...pdfBodyData)
+    let count=Object.keys(pdfMainData[1]).length
+    let widths=[];
+    let heights=[]
+    for(let i=0;i<count;i++){
+      let wtM = i===0?100:i===1?80:"*"
+      let htM = i===0?15:"auto"
+      widths.push(wtM)
+      heights.push(htM)
+    }
+    pdfDownloadObj.widths=widths
+    pdfDownloadObj.heights=heights;
+    pdfDownloadObj.data=pdfMainData;
+    pdfDownloadArr.push(pdfDownloadObj)
+  })
+
+  pdfDownloadArr.map((report,index)=>{
+   let reportObj= {
       style: "pdfTable",
       table: {
         headerRows: 1,
-        heights: heights,
-        widths: widths,
-        body: pdfBodyData,
+        heights: report.heights,
+        widths: report.widths,
+        body: report.data,
       },
       layout: {
         defaultBorder: false,
@@ -102,41 +125,11 @@ app.get("/pdf_download", async function (req, res) {
             : "green";
         },
       },
-    },
-    {
-      style: "pdfTable",
-      pageBreak: 'before',
-      table: {
-        headerRows: 1,
-        heights: heights,
-        widths: widths,
-        body: pdfBodyData2,
-      },
-      layout: {
-        defaultBorder: false,
-        //! fill color to column cells
-        fillColor: function (rowIndex, node, columnIndex) {
-          return columnIndex >= 3 && columnIndex % 2 !== 0 ? "#efefef" : null;
-        },
-        hLineWidth: function (i, node) {
-          return i === 0 || i === node.table.body.length ? 1 : 2;
-        },
-        vLineWidth: function (i, node) {
-          return i === 0 || i === node.table.widths.length ? 1 : 0;
-        },
-        hLineColor: function (i, node) {
-          return i === 0 || i === node.table.body.length
-            ? "#edeeee"
-            : "#edeeee";
-        },
-        vLineColor: function (i, node) {
-          return i === 0 || i === node.table.widths.length
-            ? "#edeeee"
-            : "green";
-        },
-      },
-    },
-  ];
+    }
+    if(index>0) reportObj.pageBreak ='before'
+
+    pdfDownloadReport.push(reportObj)
+  })
 
   let printer = new PdfPrinter(fonts);
   var dd = {
@@ -173,7 +166,7 @@ app.get("/pdf_download", async function (req, res) {
           },
         ],
       },
-      ...testObj,
+     ...pdfDownloadReport
     ],
     styles: {
       pageMargin: {
